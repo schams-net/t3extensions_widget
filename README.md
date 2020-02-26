@@ -7,6 +7,12 @@ Description
 TYPO3 Dashboard widget that displays the most recent TYPO3 extensions published/updated at the TER.
 
 
+Screenshot
+----------
+
+![TYPO3 Dashboard Widget](Documentation/Images/screenshot.png?raw=true "TYPO3 Dashboard Widget")
+
+
 Documentation
 -------------
 
