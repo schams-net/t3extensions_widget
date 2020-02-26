@@ -1,0 +1,18 @@
+services:
+
+  SchamsNet\T3extensionsWidget\:
+    resource: '../Classes/*'
+
+  lastNewExtensions:
+    class: SchamsNet\T3extensionsWidget\Widgets\LastNewExtensionsWidget
+    arguments: ['lastNewExtensions']
+    tags:
+      - name: dashboard.widget
+        widgetGroups: 'typo3'
+
+  lastExtensionUpdates:
+    class: SchamsNet\T3extensionsWidget\Widgets\LastExtensionUpdatesWidget
+    arguments: ['lastExtensionUpdates']
+    tags:
+      - name: dashboard.widget
+        widgetGroups: 'typo3'

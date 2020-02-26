@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Widget/Widget" />
+<f:section name="main">
+
+    <div class="widget-table-wrapper">
+        <table class="widget-table">
+            <f:for each="{items}" as="item">
+                <tr>
+                    <td>
+                        <f:link.external uri="{item.link}" target="_blank"><strong>EXT:{item.extensionKey}</strong> v{item.version}</f:link.external>
+                        <span class="pull-right"><time datetime="{item.lastUpdated -> f:format.date(format: '%Y-%m-%d')}">{item.lastUpdated -> f:format.date()}</time></span>
+                        <p>{item.title -> f:format.crop(maxCharacters: 180)}</p>
+                    </td>
+                </tr>
+            </f:for>
+        </table>
+    </div>
+
+</f:section>
+<f:section name="footer">
+
+    <f:link.typolink parameter="{footerLink}" target="_blank" class="widget-cta">
+        <f:translate key="{footerLinkText}" default="test" />
+    </f:link.typolink>
+
+</f:section>
+</html>
