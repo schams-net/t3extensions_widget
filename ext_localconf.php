@@ -21,7 +21,7 @@ call_user_func(static function () {
         if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'])) {
             $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'] = [
                 'frontend' => \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend::class,
-                'backend' => \TYPO3\CMS\Core\Cache\Backend\SimpleFileBackend::class,
+                'backend' => \TYPO3\CMS\Core\Cache\Backend\FileBackend::class,
                 'options' => [
                     'defaultLifetime' => 14400
                 ],
