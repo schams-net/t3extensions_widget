@@ -28,17 +28,4 @@ call_user_func(static function () {
             ];
         }
     }
-
-    // Register extension icons
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-    $iconRegistry->registerIcon(
-        'tx-t3extensions_widget-widget-icon',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:t3extensions_widget/Resources/Public/Icons/Widget.svg']
-    );
-    $iconRegistry->registerIcon(
-        'tx-t3extensions_widget-dashboard-icon',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        ['source' => 'EXT:t3extensions_widget/Resources/Public/Icons/Dashboard.svg']
-    );
 });
