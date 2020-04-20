@@ -19,15 +19,15 @@ use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
 /**
- * The LastNewExtensionsWidget lists the latest newly published
- * TYPO3 extension at the TER (data retrieved from t3extensions.org).
+ * The LastUpdatedExtensionsWidget lists the latest updated
+ * TYPO3 extensions in the TER (data retrieved from t3extensions.org).
  */
-class LastNewExtensionsWidget extends AbstractListExtensionsWidget implements WidgetInterface
+class LastUpdatedExtensionsWidget extends AbstractListExtensionsWidget implements WidgetInterface
 {
     /**
      * @var string
      */
-    private $apiEndpoint = 'https://api.t3extensions.org/s3/last10new.json';
+    private $apiEndpoint = 'https://api.t3extensions.org/s3/last10updates.json';
 
     /**
      * Constructor

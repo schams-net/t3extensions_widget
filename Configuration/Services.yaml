@@ -3,16 +3,34 @@ services:
   SchamsNet\T3extensionsWidget\:
     resource: '../Classes/*'
 
-  lastNewExtensions:
-    class: SchamsNet\T3extensionsWidget\Widgets\LastNewExtensionsWidget
-    arguments: ['lastNewExtensions']
+  dashboard.widget.lastNewExtensions:
+    class: 'SchamsNet\T3extensionsWidget\Widgets\LastNewExtensionsWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $options:
+        template: 'Widget/ListExtensionsWidget'
     tags:
       - name: dashboard.widget
-        widgetGroups: 'typo3'
+        identifier: 'lastNewExtensions'
+        groupNames: 'typo3'
+        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.title'
+        description: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.description'
+        width: 'small'
+        height: 'large'
+        iconIdentifier: 'content-widget-text'
 
-  lastExtensionUpdates:
-    class: SchamsNet\T3extensionsWidget\Widgets\LastExtensionUpdatesWidget
-    arguments: ['lastExtensionUpdates']
+  dashboard.widget.lastUpdatedExtensions:
+    class: 'SchamsNet\T3extensionsWidget\Widgets\LastUpdatedExtensionsWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $options:
+        template: 'Widget/ListExtensionsWidget'
     tags:
       - name: dashboard.widget
-        widgetGroups: 'typo3'
+        identifier: 'lastUpdatedExtensions'
+        groupNames: 'typo3'
+        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.title'
+        description: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.description'
+        width: 'small'
+        height: 'large'
+        iconIdentifier: 'content-widget-text'

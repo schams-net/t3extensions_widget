@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">>
-	<file t3:id="1582422693" source-language="en" datatype="plaintext" original="messages" date="2020-02-23T00:00:00Z" product-name="t3extensions_widget">
+	<file t3:id="1582422693" source-language="en" datatype="plaintext" original="messages" date="2020-04-19T00:00:00Z" product-name="t3extensions_widget">
 		<header/>
 		<body>
-			<trans-unit id="lastNewExtensionsWidget.title" xml:space="preserve">
+			<trans-unit id="widgets.lastNewExtensions.title" xml:space="preserve">
 				<source>Latest New TYPO3 Extensions</source>
 			</trans-unit>
-			<trans-unit id="lastNewExtensionsWidget.description" xml:space="preserve">
+			<trans-unit id="widgets.lastNewExtensions.description" xml:space="preserve">
 				<source>Lists the most recent TYPO3 extensions published at the TER.</source>
 			</trans-unit>
 
-			<trans-unit id="lastExtensionUpdatesWidget.title" xml:space="preserve">
+			<trans-unit id="widgets.lastUpdatedExtensions.title" xml:space="preserve">
 				<source>Last TYPO3 Extension Updates</source>
 			</trans-unit>
-			<trans-unit id="lastExtensionUpdatesWidget.description" xml:space="preserve">
+			<trans-unit id="widgets.lastUpdatedExtensions.description" xml:space="preserve">
 				<source>Lists the most recent TYPO3 extension updates published at the TER.</source>
 			</trans-unit>
 
