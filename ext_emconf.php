@@ -19,7 +19,7 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'schams.net',
     'state' => 'beta',
     'clearCacheOnLoad' => true,
-    'version' => '1.0.0',
+    'version' => '1.1.0',
     'autoload' => [
         'psr-4' => [
             'SchamsNet\\T3extensionsWidget\\' => 'Classes'
@@ -27,7 +27,7 @@ $EM_CONF[$_EXTKEY] = [
     ],
     'constraints' => [
         'depends' => [
-            'typo3' => '10.3.0-10.4.99',
+            'typo3' => '10.4.0-10.4.99',
             'php' => '7.2.0-7.4.99'
         ],
         'conflicts' => [],

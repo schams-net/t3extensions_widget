@@ -22,7 +22,7 @@ N/A
 Requirements
 ------------
 
-* TYPO3 CMS version 10.3 or higher
+* TYPO3 CMS version 10.4 (TYPO3 v10 LTS)
 * PHP version 7.2 or higher
 
 
