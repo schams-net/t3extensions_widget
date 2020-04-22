@@ -22,7 +22,7 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
  * Other classes extend this class, which provides common properties
  * and functionality.
  */
-class AbstractExtensionsWidget
+class AbstractListExtensionsWidget
 {
     /**
      * @var WidgetConfigurationInterface
