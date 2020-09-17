@@ -27,12 +27,12 @@ class AbstractListExtensionsWidget
     /**
      * @var WidgetConfigurationInterface
      */
-    private $configuration;
+    protected $configuration;
 
     /**
      * @var StandaloneView
      */
-    private $view;
+    protected $view;
 
     /**
      * @var CacheManager
@@ -42,7 +42,7 @@ class AbstractListExtensionsWidget
     /**
      * @var array
      */
-    private $options;
+    protected $options;
 
     /**
      * @var string
