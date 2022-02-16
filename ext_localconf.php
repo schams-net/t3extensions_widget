@@ -10,22 +10,20 @@
  * @author Michael Schams <schams.net>
  */
 
-if (!defined('TYPO3_MODE')) {
-    die('Access denied.');
-}
+use TYPO3\CMS\Core\Cache\Frontend\VariableFrontend;
+use TYPO3\CMS\Core\Cache\Backend\FileBackend;
 
-call_user_func(static function () {
+defined('TYPO3') or die();
 
-    if (TYPO3_MODE === 'BE') {
-        // Configure caching framework
-        if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'])) {
-            $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'] = [
-                'frontend' => \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend::class,
-                'backend' => \TYPO3\CMS\Core\Cache\Backend\FileBackend::class,
-                'options' => [
-                    'defaultLifetime' => 14400
-                ],
-            ];
-        }
+(function () {
+    // Configure caching framework
+    if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'])) {
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'] = [
+            'frontend' => VariableFrontend::class,
+            'backend' => FileBackend::class,
+            'options' => [
+                'defaultLifetime' => 14400
+            ],
+        ];
     }
-});
+})();
