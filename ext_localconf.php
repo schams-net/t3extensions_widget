@@ -17,13 +17,8 @@ defined('TYPO3') or die();
 
 (function () {
     // Configure caching framework
-    if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'])) {
-        $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'] = [
-            'frontend' => VariableFrontend::class,
-            'backend' => FileBackend::class,
-            'options' => [
-                'defaultLifetime' => 14400
-            ],
-        ];
-    }
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget'] ??= [];
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget']['frontend'] ??= VariableFrontend::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget']['backend'] ??= FileBackend::class;
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['t3extensions_widget']['options']['defaultLifetime'] ??= 14400;
 })();

@@ -1,36 +1,47 @@
 services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
 
   SchamsNet\T3extensionsWidget\:
     resource: '../Classes/*'
 
-  dashboard.widget.lastNewExtensions:
-    class: 'SchamsNet\T3extensionsWidget\Widgets\LastNewExtensionsWidget'
+  cache.ListExtensionsWidget:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['t3extensions_widget']
+
+  dashboard.widget.SchamsNet.T3extensionsWidget.LastNewExtensionsWidget:
+    class: 'SchamsNet\T3extensionsWidget\Widgets\ListExtensionsWidget'
     arguments:
-      $view: '@dashboard.views.widget'
+      $cache: '@cache.ListExtensionsWidget'
       $options:
-        template: 'Widget/ListExtensionsWidget'
+        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.title'
+        feedUrl: 'https://api.t3extensions.org/s3/last10new.json'
     tags:
       - name: dashboard.widget
-        identifier: 'lastNewExtensions'
+        identifier: 'LastNewExtensionsWidget'
         groupNames: 'typo3'
         title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.title'
         description: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.description'
-        width: 'small'
-        height: 'large'
         iconIdentifier: 'content-widget-text'
+        height: 'large'
+        width: 'small'
 
-  dashboard.widget.lastUpdatedExtensions:
-    class: 'SchamsNet\T3extensionsWidget\Widgets\LastUpdatedExtensionsWidget'
+  dashboard.widget.SchamsNet.T3extensionsWidget.LastUpdatedExtensionsWidget:
+    class: 'SchamsNet\T3extensionsWidget\Widgets\ListExtensionsWidget'
     arguments:
-      $view: '@dashboard.views.widget'
+      $cache: '@cache.ListExtensionsWidget'
       $options:
-        template: 'Widget/ListExtensionsWidget'
+        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.title'
+        feedUrl: 'https://api.t3extensions.org/s3/last10updates.json'
     tags:
       - name: dashboard.widget
-        identifier: 'lastUpdatedExtensions'
+        identifier: 'LastUpdatedExtensionsWidget'
         groupNames: 'typo3'
         title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.title'
         description: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.description'
-        width: 'small'
-        height: 'large'
         iconIdentifier: 'content-widget-text'
+        height: 'large'
+        width: 'small'
