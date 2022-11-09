@@ -1,27 +1,31 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Widget/Widget" />
-<f:section name="main">
+<f:layout name="Widget/ListExtensionsWidget" />
 
+<f:section name="main">
     <div class="widget-table-wrapper">
         <table class="widget-table">
             <f:for each="{items}" as="item">
                 <tr>
-                    <td>
-                        <f:link.external uri="{item.link}" target="_blank"><strong>EXT:{item.extensionKey}</strong> v{item.version}</f:link.external>
-                        <span class="pull-right"><time datetime="{item.lastUpdated -> f:format.date(format: '%Y-%m-%d')}">{item.lastUpdated -> f:format.date()}</time></span>
-                        <p>{item.title -> f:format.crop(maxCharacters: 180)}</p>
+                    <td class="d-flex">
+                        <div class="w-100">
+                            <p class="mb-0">
+                                <strong>{item.title -> f:format.crop(maxCharacters: 180)}</strong><br />
+                                <f:link.external uri="{item.link}" target="_blank">EXT:{item.extensionKey}</f:link.external>&nbsp;&#8226;&nbsp;v{item.version}
+                            </p>
+                        </div>
+                        <div class="flex-shrink-1 text-nowrap">
+                            <time datetime="{item.lastUpdated -> f:format.date(format: '%Y-%m-%d')}">{item.lastUpdated -> f:format.date(format: '%d-%b-%Y')}</time>
+                        </div>
                     </td>
                 </tr>
             </f:for>
         </table>
     </div>
-
 </f:section>
-<f:section name="footer">
 
+<f:section name="footer">
     <f:link.typolink parameter="{footerLink}" target="_blank" class="widget-cta">
         <f:translate key="footerLinkText" extensionName="T3extensionsWidget" default="{footerLinkText}" />
     </f:link.typolink>
-
 </f:section>
 </html>
