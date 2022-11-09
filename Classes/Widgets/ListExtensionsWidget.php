@@ -30,7 +30,7 @@ class ListExtensionsWidget extends AbstractListExtensionsWidget implements Widge
 
     public function renderWidgetContent(): string
     {
-        $view = $this->backendViewFactory->create($this->request, ['schams-net/t3extensions_widget']);
+        $view = $this->backendViewFactory->create($this->request, ['schams-net/t3extensions-widget']);
         $view->assignMultiple([
             'options' => $this->options,
             'items' => $this->getItems(),
