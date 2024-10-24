@@ -12,7 +12,7 @@ TYPO3 Dashboard widget that displays the most recent TYPO3 extensions published/
 
 * TYPO3 CMS version 12 LTS
 * TYPO3 [Dashboard](https://docs.typo3.org/c/typo3/cms-dashboard/main/en-us/) system extension
-* PHP version 8.1 or 8.2
+* PHP version 8.1, 8.2, or 8.3
 
 ## Installation
 
