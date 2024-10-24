@@ -18,7 +18,7 @@ services:
       $cache: '@cache.ListExtensionsWidget'
       $options:
         title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.title'
-        feedUrl: 'https://api.t3extensions.org/s3/last10new.json'
+        feedUrl: 'https://t3extensions.org/api/last10/new'
     tags:
       - name: dashboard.widget
         identifier: 'LastNewExtensionsWidget'
@@ -35,7 +35,7 @@ services:
       $cache: '@cache.ListExtensionsWidget'
       $options:
         title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.title'
-        feedUrl: 'https://api.t3extensions.org/s3/last10updates.json'
+        feedUrl: 'https://t3extensions.org/api/last10/updates'
     tags:
       - name: dashboard.widget
         identifier: 'LastUpdatedExtensionsWidget'
