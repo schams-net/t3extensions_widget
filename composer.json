@@ -3,9 +3,9 @@
     "description": "Dashboard widget that displays the most recent TYPO3 extensions published/updated at the TER",
     "type": "typo3-cms-extension",
     "require": {
-        "typo3/cms-core": "^12",
-        "typo3/cms-dashboard": "^12",
-        "php": "^8.1 || ^8.2 || ^8.3"
+        "typo3/cms-core": "^13",
+        "typo3/cms-dashboard": "^13",
+        "php": "^8.2 || ^8.3"
     },
     "autoload": {
         "psr-4": {
