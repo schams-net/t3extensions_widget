@@ -38,7 +38,7 @@ abstract class AbstractListExtensionsWidget
 
         // Read the content from the remote instance
         $content = GeneralUtility::getUrl($this->options['feedUrl']);
-        if ($this->isJson($content)) {
+        if (gettype($content) === 'string' && $this->isJson($content)) {
             $extensions = json_decode($content);
             $itemCount = 0;
             $this->items = [];
