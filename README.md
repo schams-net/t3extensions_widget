@@ -26,7 +26,7 @@ In TYPO3 installations that were set up by using the classic installation method
 
 ## License
 
-(c) 2020-2024 Michael Schams (schams.net), all rights reserved
+(c) 2020-2025 Michael Schams (schams.net), all rights reserved
 
 This software is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, either version 3 of the License, or any later version.
 
