@@ -1,0 +1,9 @@
+div.t3extensions-widget {
+}
+
+div.t3extensions-widget .widget-table .extension-title {
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

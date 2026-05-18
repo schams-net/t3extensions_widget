@@ -17,9 +17,12 @@ use TYPO3\CMS\Core\Cache\Frontend\VariableFrontend as Cache;
 use TYPO3\CMS\Dashboard\Widgets\RequestAwareWidgetInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
+use TYPO3\CMS\Dashboard\Widgets\AdditionalCssInterface;
 
-class ListExtensionsWidget extends AbstractListExtensionsWidget implements WidgetInterface, RequestAwareWidgetInterface
+class ListExtensionsWidget extends AbstractListExtensionsWidget implements WidgetInterface, RequestAwareWidgetInterface, AdditionalCssInterface
 {
+    public const EXTENSION_KEY = 't3extensions_widget';
+
     public function __construct(
         protected readonly WidgetConfigurationInterface $configuration,
         protected readonly Cache $cache,
@@ -42,5 +45,12 @@ class ListExtensionsWidget extends AbstractListExtensionsWidget implements Widge
     public function getOptions(): array
     {
         return $this->options;
+    }
+
+    public function getCssFiles(): array
+    {
+        return [
+            'EXT:' . self::EXTENSION_KEY . '/Resources/Public/Css/widget.css',
+        ];
     }
 }
