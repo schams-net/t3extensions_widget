@@ -10,8 +10,9 @@ TYPO3 Dashboard widget that displays the most recent TYPO3 extensions published/
 
 ## Requirements
 
-* TYPO3 v12 LTS [get.typo3.org](https://get.typo3.org/version/12) and PHP v8.1, v8.2, v8.3, or v8.4.
-* TYPO3 v13 LTS [get.typo3.org](https://get.typo3.org/version/13) and PHP v8.2, 8.3, or v8.4.
+* TYPO3 v12 LTS and PHP v8.1, v8.2, v8.3, or v8.4.
+* TYPO3 v13 LTS and PHP v8.2, 8.3, or v8.4.
+* TYPO3 v14 LTS and PHP v8.2, 8.3, or v8.4.
 * TYPO3 [Dashboard](https://docs.typo3.org/c/typo3/cms-dashboard/main/en-us/) system extension
 
 ## Installation
@@ -26,11 +27,11 @@ In TYPO3 installations that were set up by using the classic installation method
 
 ## License
 
-(c) 2020-2025 Michael Schams (schams.net), all rights reserved
+(c) 2020-2026 Michael Schams (schams.net), all rights reserved
 
 This software is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License, either version 3 of the License, or any later version.
 
-The GNU General Public License can be found at:  
+The GNU General Public License can be found at:
 <http://www.gnu.org/copyleft/gpl.html>
 
 ## Contribution
