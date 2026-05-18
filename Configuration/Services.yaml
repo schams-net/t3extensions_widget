@@ -17,14 +17,13 @@ services:
     arguments:
       $cache: '@cache.ListExtensionsWidget'
       $options:
-        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.title'
         feedUrl: 'https://t3extensions.org/api/last10/new'
     tags:
       - name: dashboard.widget
         identifier: 'LastNewExtensionsWidget'
         groupNames: 'typo3'
-        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.title'
-        description: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastNewExtensions.description'
+        title: 't3extensions_widget.messages:widgets.lastNewExtensions.title'
+        description: 't3extensions_widget.messages:widgets.lastNewExtensions.description'
         iconIdentifier: 'content-widget-text'
         height: 'large'
         width: 'small'
@@ -34,14 +33,13 @@ services:
     arguments:
       $cache: '@cache.ListExtensionsWidget'
       $options:
-        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.title'
         feedUrl: 'https://t3extensions.org/api/last10/updates'
     tags:
       - name: dashboard.widget
         identifier: 'LastUpdatedExtensionsWidget'
         groupNames: 'typo3'
-        title: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.title'
-        description: 'LLL:EXT:t3extensions_widget/Resources/Private/Language/locallang.xlf:widgets.lastUpdatedExtensions.description'
+        title: 't3extensions_widget.messages:widgets.lastUpdatedExtensions.title'
+        description: 't3extensions_widget.messages:widgets.lastUpdatedExtensions.description'
         iconIdentifier: 'content-widget-text'
         height: 'large'
         width: 'small'
